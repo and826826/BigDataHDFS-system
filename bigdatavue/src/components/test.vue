@@ -53,7 +53,7 @@ export default {
 }
 
 body {
-  background-color: #f9fafb;
+  background-color: red;
   font-family: 'Open Sans', sans-serif;
   display: flex;
   align-items: center;
