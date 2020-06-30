@@ -28,7 +28,7 @@ import axios from 'axios'
     },
     methods: {
       register: function (){
-        axios.get('http://localhost:8080/bigData_war_exploded/V1/users/user/',
+        axios.get('http://localhost:8080/bigdata_ssm_war_exploded//V1/users/user/',
         {
           params:{
             name:this.username,
