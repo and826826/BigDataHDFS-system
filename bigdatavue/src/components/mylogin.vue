@@ -45,7 +45,7 @@ import axios from 'axios'
 
       console.log('username: ' + this.username+'password:'+this.password) //console中字符串需使用单引号''
       // this.$route.router.go({name: 'index'}) //直接使用路由的名字进行跳转
-      axios.get('http://localhost:8080/bigData_war_exploded/V1/users/user/',
+      axios.get('http://localhost:8080/bigdata_ssm_war_exploded/V1/users/user/',
       {
         params:{
           name:this.username,

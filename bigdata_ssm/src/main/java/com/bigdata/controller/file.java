@@ -39,13 +39,7 @@ import javax.xml.crypto.Data;
 public class file {
     @Autowired
     UserMapper userMapper;
-    //配置连接到虚拟机中的hadoop
-    public static final String HDFS_PATH = "hdfs://192.168.170.134:9000";
-//    public static final String HDFS_PATH = "hdfs://39.101.190.1:9000";
-    //hdfs文件系统
-    FileSystem fileSystem = null;
-    //获取环境对象
-    Configuration configuration = null;
+
     @RequestMapping("/")
     public ModelAndView register(HttpServletRequest httpServletRequest,HttpServletResponse httpServletResponse) throws IOException, URISyntaxException, InterruptedException {
         httpServletRequest.setCharacterEncoding("UTF-8");

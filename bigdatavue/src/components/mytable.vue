@@ -106,7 +106,7 @@ import axios from 'axios'
       handleChange(file) {
         console.log(file.name);
         // this.fileList=file;
-        axios.get("http://localhost:8080/bigData_war_exploded/V1/users/",{
+        axios.get("http://localhost:8080/bigdata_ssm_war_exploded/V1/users/",{
         params:{
           action:"upload",
           d:this.realuser+this.nowdirectory,
@@ -119,7 +119,7 @@ import axios from 'axios'
       },
       // 新建目录
       adddirectory(){
-        axios.get("http://localhost:8080/bigData_war_exploded/V1/users/",{
+        axios.get("http://localhost:8080/bigdata_ssm_war_exploded/V1/users/",{
         params:{
           action:"adddirectory",
           d:this.realuser+this.nowdirectory+"/"+this.newdirectory
@@ -130,7 +130,7 @@ import axios from 'axios'
       },
       // 显示所有文件
       allfile(){
-        axios.get("http://localhost:8080/bigData_war_exploded/V1/users/",{
+        axios.get("http://localhost:8080/bigdata_ssm_war_exploded/V1/users/",{
         params:{
           action:"files",
           d:this.realuser+this.nowdirectory
@@ -148,20 +148,12 @@ import axios from 'axios'
 
       //删除
       handleDelete(name) {
-        axios.get("http://localhost:8080/bigData_war_exploded/V1/users/",{
+        axios.get("http://localhost:8080/bigdata_ssm_war_exploded/V1/users/",{
         params:{
           action:"delete",
-          d:this.realuser+this.nowdirectory+name
+          d:this.realuser+this.nowdirectory+"/"+name
         }
-      }).then(
-        res=>{
-
-          console.log(res.data)
-          this.tableData=res.data;
-
-        }
-      ).catch(console.log
-      ).then(this.allfile("")
+      }).then(this.allfile("")
       ).catch(res=>console.log(res))
       
 
