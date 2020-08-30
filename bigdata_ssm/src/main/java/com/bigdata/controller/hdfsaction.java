@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class hdfsaction {
-    public static final String HDFS_PATH = "hdfs://192.168.170.137:9000";
+    public static final String HDFS_PATH = "hdfs://192.168.170.138:9000";
 
 
 

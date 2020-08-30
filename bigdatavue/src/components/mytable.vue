@@ -1,17 +1,6 @@
 <template>
 <div>
-  <el-upload
-  class="upload-demo"
-  action=" "
-  :on-change="handleChange"
-  :auto-upload="false">
-  <el-button size="small" type="primary">点击上传</el-button>
 
-</el-upload>
-
-  <h1>这是我的用户{{user}}当前位置</h1>
-  <h1>{{nowdirectory}}</h1>
-  <h1>目录名称：</h1>
   <el-input v-model="newdirectory" placeholder="/" style="float:left" size="mini"></el-input>
   <el-button round style="float:left" @click="adddirectory">新建文件夹</el-button>
   <el-button round style="float:left" @click="back">返回上一级</el-button>
@@ -58,10 +47,15 @@
     </el-table-column>
   </el-table>
   <div>
-<h1>{{tableData}}</h1>
-<h1>{{nowdirectory}}</h1>
   </div>
+  <el-upload
+  class="upload-demo"
+  action=" "
+  :on-change="handleChange"
+  :auto-upload="false">
+  <el-button size="small" type="primary">点击上传文件</el-button>
 
+</el-upload>
   </div>
 </template>
 
@@ -160,7 +154,7 @@ import axios from 'axios'
       },
       //下载
       handledownload(name){
-        window.open(`http://192.168.170.137:9864/webhdfs/v1/IDEA/${this.realuser}/${this.nowdirectory}/${name}?user.name=hadoop&op=OPEN&namenoderpcaddress=192.168.170.137:9000`)
+        window.open(`http://192.168.170.138:9864/webhdfs/v1/IDEA/${this.realuser}/${this.nowdirectory}/${name}?user.name=hadoop&op=OPEN&namenoderpcaddress=192.168.170.137:9000`)
 
       },
       //返回上一级

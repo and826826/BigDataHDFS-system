@@ -40,7 +40,7 @@ public class hdfs {
     @Autowired
     UserMapper userMapper;
     //配置连接到虚拟机中的hadoop
-    public static final String HDFS_PATH = "hdfs://192.168.170.137:9000";
+    public static final String HDFS_PATH = "hdfs://192.168.170.138:9000";
     public static final String base = "/IDEA";
     //    public static final String HDFS_PATH = "hdfs://39.101.190.1:9000";
     //hdfs文件系统
